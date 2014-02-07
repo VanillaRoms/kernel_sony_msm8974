@@ -1548,7 +1548,6 @@
 			< 2457600000  970000  802 >;
 	};
 
-<<<<<<< HEAD
 	qcom,msm-cpufreq@0 {
 		qcom,cpufreq-table =
 			<  300000  300000 300 /* 37.5 MHz */ >,
@@ -1566,22 +1565,6 @@
 			< 1958400 1728000 300 /* 37.5 MHz */ >,
 			< 2265600 1728000 300 /* 37.5 MHz */ >,
 			< 2496000 1728000 300 /* 37.5 MHz */ >;
-=======
-	i2c@f9928000 { /* BLSP-1 QUP-6 */
-		cell-index = <3>;
-		compatible = "qcom,i2c-qup";
-		reg = <0xf9928000 0x1000>;
-		#address-cells = <1>;
-		#size-cells = <0>;
-		reg-names = "qup_phys_addr";
-		interrupts = <0 100 0>;
-		interrupt-names = "qup_err_intr";
-		qcom,i2c-bus-freq = <400000>;
-		qcom,i2c-src-freq = <19200000>;
-		qcom,sda-gpio = <&msmgpio 29 0>;
-		qcom,scl-gpio = <&msmgpio 30 0>;
-		qcom,master-id = <86>;
->>>>>>> 4bbc993... devfreq: Add MSM CPUfreq governor
 	};
 };
 
@@ -1593,11 +1576,6 @@
 	qcom,bus-control;
 	qcom,initial-pwrlevel = <3>;
 
-<<<<<<< HEAD
-	qcom,initial-pwrlevel = <6>;
-
-=======
->>>>>>> 119fc77... msm: kgsl: bus modifier computation
 	/* Updated bus bandwidth requirements */
 	qcom,msm-bus,vectors-KBps =
 		/* Off */
@@ -1605,17 +1583,6 @@
 		/* Sub-SVS / SVS */
 		<26 512 0 1600000>, <89 604 0 3200000>,
 		/* SVS */
-<<<<<<< HEAD
-		<26 512 0 2400000>, <89 604 0 3000000>,
-		/* Nominal / SVS */
-		<26 512 0 4656000>, <89 604 0 3000000>,
-		/* Nominal */
-		<26 512 0 4656000>, <89 604 0 5120000>,
-		/* Turbo / Nominal */
-		<26 512 0 7464000>, <89 604 0 5120000>,
-		/* Turbo */
-		<26 512 0 7464000>, <89 604 0 6400000>;
-=======
 		<26 512 0 2456000>, <89 604 0 3200000>,
 		/* low Nominal / SVS */
 		<26 512 0 3680000>, <89 604 0 3200000>,
@@ -1641,7 +1608,6 @@
 		<26 512 0 4912000>, <89 604 0 9248000>,
 		/* Turbo / Turbo */
 		<26 512 0 7464000>, <89 604 0 9248000>;
->>>>>>> 119fc77... msm: kgsl: bus modifier computation
 
        qcom,gpu-pwrlevels {
                #address-cells = <1>;
@@ -1652,44 +1618,6 @@
                qcom,gpu-pwrlevel@0 {
                        reg = <0>;
                        qcom,gpu-freq = <578000000>;
-<<<<<<< HEAD
-                       qcom,bus-freq = <5>;
-                       qcom,io-fraction = <33>;
-               };
-
-		qcom,gpu-pwrlevel@1 {
-			reg = <1>;
-			qcom,gpu-freq = <462400000>;
-			qcom,bus-freq = <4>;
-			qcom,io-fraction = <33>;
-		};
-
-		qcom,gpu-pwrlevel@2 {
-			reg = <2>;
-			qcom,gpu-freq = <462400000>;
-			qcom,bus-freq = <3>;
-			qcom,io-fraction = <66>;
-		};
-
-		qcom,gpu-pwrlevel@3 {
-			reg = <3>;
-			qcom,gpu-freq = <389000000>;
-			qcom,bus-freq = <4>;
-			qcom,io-fraction = <66>;
-		};
-
-		qcom,gpu-pwrlevel@4 {
-			reg = <4>;
-			qcom,gpu-freq = <389000000>;
-			qcom,bus-freq = <3>;
-			qcom,io-fraction = <66>;
-		};
-
-               qcom,gpu-pwrlevel@5 {
-                       reg = <5>;
-                       qcom,gpu-freq = <330000000>;
-                       qcom,bus-freq = <4>;
-=======
                        qcom,bus-freq = <14>;
                        qcom,io-fraction = <33>;
                };
@@ -1698,7 +1626,6 @@
                        reg = <1>;
                        qcom,gpu-freq = <462400000>;
                        qcom,bus-freq = <11>;
->>>>>>> 119fc77... msm: kgsl: bus modifier computation
                        qcom,io-fraction = <66>;
                };
 
