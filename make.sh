@@ -19,7 +19,7 @@ make clean
 # Generates a new .config and exists
 if [ "$1" = "config" ] ; then
 echo 'Making defconfig for Honami'
-make cm_rhine_honami_row_defconfig
+make slim_rhine_honami_row_defconfig
 exit
 fi
 
